@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: .
+source: ../Assets/Guarana/Docs/
 incremental: false
 highlighter: rouge
 
