@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Navigation Structure
-nav_order: 5
+title: Componentes
+nav_order: 2
 ---
 Page test
