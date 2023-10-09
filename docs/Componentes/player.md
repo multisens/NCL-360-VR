@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scheduler
+title: Player
 nav_order: 3
 parent: Componentes
 ---

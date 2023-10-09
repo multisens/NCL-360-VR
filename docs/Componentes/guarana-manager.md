@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scheduler
+title: Guarana Manager
 nav_order: 2
 parent: Componentes
 ---
