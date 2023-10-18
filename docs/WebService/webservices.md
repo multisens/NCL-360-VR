@@ -1,6 +1,6 @@
 ---
 layout: default
-title: WebService
+title: WebServices
 nav_order: 3
 has_children: true
 ---

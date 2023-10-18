@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Discovery
+title: MessageTemplates
 nav_order: 4
 parent: WebServices
 ---

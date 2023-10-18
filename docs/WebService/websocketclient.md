@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Discovery
+title: WebSocketClient
 nav_order: 9
 parent: WebServices
 ---

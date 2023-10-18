@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Discovery
+title: Register
 nav_order: 6
 parent: WebServices
 ---

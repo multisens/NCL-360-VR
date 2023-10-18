@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Discovery
+title: MockDiscovery
 nav_order: 5
 parent: WebServices
 ---

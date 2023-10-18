@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Discovery
+title: UserSelector
 nav_order: 7
 parent: WebServices
 ---
