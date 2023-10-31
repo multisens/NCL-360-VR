@@ -27,6 +27,7 @@ Recebe dois objetos, um EventType e um EventTransition e checa se o evento em se
 ## TriggerTransition
 ## StartPreparation
 ## StartPresentation
+[Document.md]({% link docs/documentos/Document.md %})
 
 ## StopPresentation
 ## PausePresentation
