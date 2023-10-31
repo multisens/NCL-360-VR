@@ -18,4 +18,4 @@ Retorna o tipo do evento.
 ## State
 Retorna o estado atual do evento.
 ## Transition
-Recebe uma transição, checa se é valida a partir do estado atual do evento e, caso seja, altera o estado atual de acordo com a transição.
+Recebe uma transição, checa se é valida a partir do estado atual do evento e, caso seja, retorna true e altera o estado atual de acordo com a transição. Caso contrário, retorna false. 

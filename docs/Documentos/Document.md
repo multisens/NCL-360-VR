@@ -35,7 +35,7 @@ Recebe um float, normalmente de um Time.deltaTime e percorre todos os objetos Me
 ## EvalAction
 Recebe um id referente a um objeto Media, um evento e uma transição. Caso consiga encontrar o objeto Media com o id recebido, chama o método EvalAction da mídia, passando o evento e a transição recebidos para checar se a transição é válida e, caso seja, realiza a transição.
 ## EvalEventTransition
-Chama um método do Scheduler para adicionar uma tupla de id de mídia, um evento e uma transição a uma lista de transições a serem checadas e que podem servir de gatilho para uma transição de estado de outras mídias.
+Chama um método do Scheduler para adicionar uma tupla de id de mídia, um evento e uma transição a uma lista de transições a serem formatadas como uma menssagem a ser enviada ao GINGA.
 
 
 
