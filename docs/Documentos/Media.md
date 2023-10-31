@@ -27,7 +27,7 @@ Recebe dois objetos, um EventType e um EventTransition e checa se o evento em se
 ## TriggerTransition
 ## StartPreparation
 ## StartPresentation
-[Document.md]({% link docs\Documentos\Document.md %})
+[Document.md](https://gpmm.github.io/TestPages/Documentos/Document.html)
 
 ## StopPresentation
 ## PausePresentation
