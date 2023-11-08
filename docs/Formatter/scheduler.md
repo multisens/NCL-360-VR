@@ -14,6 +14,9 @@ parent: Formatter
 | [AddEventTransition](#addeventtransition)| 
 
 ## Update
+O método update é chamado a cada frame renderizado, ele é responsável por  monitorar e sincronizar as ações que devem ser feitas, chamando os métodos relevantes no momento correto. 
+
+Uma das funções é chamar o método EvalTick da classe document, passando o [Time.deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html) atual. Além disso, sempre que alguma de suas listas (actions, delayedActions, eventTransitions) não estiver vazia, ele faz as chamadas necessárias para que as ações sejam executadas.
 ## SetDocument
 Atribui um Document representando a cena que o Scheduler está controlando.
 ## AddAction
