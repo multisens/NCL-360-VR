@@ -49,6 +49,10 @@ Recebe um arquivo XML contendo a descrição de uma cena, faz o parse dele e cri
 ## RemoveDocument
 Desativa o Scheduler e deleta os objetos que estavam na cena.
 ## ReceiveAction
+Recebe um objeto ReceiveAction representando uma ação e o adiciona a lista storedActionMsg.
 ## NotifyEventTransition
+Se o evento for um dos aceitos pela cena, cria uma mensagem com as informações do evento e a envia para o GINGA.
 ## GeneratePlayer
+Método responsável por instanciar novos players de mídia, utilizando o prefab correto dependendo do tipo da mídia.
 ## GenerateSkyPlayer
+Método que instancia um vídeo 360° como skybox de uma cena.
