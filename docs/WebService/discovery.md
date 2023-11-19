@@ -11,3 +11,4 @@ parent: WebService
 
 
 ## GetLocation
+Retorna a URL com IP e porta do GINGA.
