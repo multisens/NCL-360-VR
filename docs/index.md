@@ -3,34 +3,18 @@ title: Home
 layout: home
 nav_order: 1
 ---
+Quando a aplicação é iniciada, 5 objetos ja estão em cena: *GuaranaManager*, *Scheduler*, *DownloadManager*, *UserSelector* e *WebService*.
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+Awake do *GuaranaManager* desativa os componentes *UserSelector* e *Scheduler* ate que eles sejam necessarios.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+Start do *WebService* inicia o *MockDiscovery*, que registra uma porta disponivel do dispositivo e inicia um listener em uma thread separada. Quando o listener recebe uma request, ele registra o IP do dispositivo que fez a request e sua porta como a localização do GINGA na rede e desativa o *Discovery*.
 
-More specifically, the created site:
+Uma vez que o Discovery foi encerrado, o *WebService* utiliza o IP e a porta do GINGA para enviar uma request de registro para estabelecer a conexão. Se a request de conexão receber uma resposta positiva, o *WebService* inicia um *WebSocketClient*, que será responsável por enviar e receber as mensagens de comunicação com o GINGA desses ponto em diante.
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+Uma vez que a conexão foi estabelecida, o *GuaranaManager* ativa o *UserSelector*, fazendo uma request da lista de usuários e permitindo a seleção de um perfil de usuário, podendo ter diferentes opções de acordo com o perfil selecionado. No entanto, essa funcionalidade ainda não está implementada completamente, e um usuário padrão é selecionado automaticamente.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+Nessa etapa, quando o Guaraná recebe uma mensagem do GINGA contendo um appId, indicando que são informações com a localização de uma cena, ele utiliza o *DownloadManager* para baixar o documento NCL360 que contém a definição da cena. 
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+Após o download bem sucedido, é iniciado o parser para o documento NCL360. O parser é responsável por iterar por cada um dos elementos definidos no documento e extrair as informações (coordenadas, dimensões, tipo, URL source, etc) das mídias, que são armazenadas em objetos do tipo *Media* e adicionadas a uma lista de um objeto *Document*, que representa a cena como um todo.
 
-To get started with creating a site, simply:
-
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
-
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+O Scheduler é então ativado. Ele é responsável por coordenar a execução das ações e transições da cena. Por exemplo, quando uma ação enviada pelo GINGA é recebida, o Scheduler registra a ação em uma lista e fará ela ser executada no momento correto, podendo ser o mais rápido possível ou após um delay definido. Ele também é responsável por notificar o GuaranaManager de transições que aconteceram, para que ele por sua vez notifique o GINGA.
