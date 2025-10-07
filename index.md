@@ -11,7 +11,9 @@ ambiente VR através do uso do middleware Ginga-NCL. Ele possibilita a execuçã
 O Guaraná utiliza uma linguagem XML para especificação das cenas 360◦ a serem executadas. Essa linguagem é chamada NCL360, desenvolvida para o Guaraná e que foi inspirada na linguagem NCL mas adaptada para criação de ambientes 360◦ em VR.
 
 ## Fluxo Principal de Execução
-Quando a aplicação é iniciada, 5 objetos ja estão em cena: [*GuaranaManager*](https://gpmm.github.io/TestPages/guaranaManager.html), [*Scheduler*](https://gpmm.github.io/TestPages/Formatter/scheduler.html), [*DownloadManager*](https://gpmm.github.io/TestPages/WebService/downloadmanager.html), [*UserSelector*](https://gpmm.github.io/TestPages/WebService/userselector.html) e [*WebService*](https://gpmm.github.io/TestPages/WebService/webservice.html).
+Quando a aplicação é iniciada, 5 objetos ja estão em cena: [*GuaranaManager*]({{ site.baseurl }}/guaranaManager.html), [*Scheduler*]({{ site.baseurl }}/Formatter/scheduler.html), [*DownloadManager*]({{ site.baseurl }}/WebService/downloadmanager.html), [*UserSelector*]({{ site.baseurl }}/WebService/userselector.html) e [*WebService*]({{ site.baseurl }}/WebService/webservice.html).
+
+![](/assets/RefactoredArchitecture.png)
 
 O Awake do *GuaranaManager* desativa os componentes *UserSelector* e *Scheduler* ate que eles sejam necessarios.
 
