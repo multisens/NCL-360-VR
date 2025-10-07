@@ -3,3 +3,6 @@ description: Documentação do projeto Guaraná
 theme: just-the-docs
 
 url: https://multisens.com.br/NCL-360-VR/
+
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template
