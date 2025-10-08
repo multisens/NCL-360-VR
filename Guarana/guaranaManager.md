@@ -2,6 +2,7 @@
 layout: default
 title: GuaranaManager
 nav_order: 6
+parent: Guarana
 ---
 
 Objeto responsável por gerenciar a comunicação entre o GINGA e o Guarana/Unity.
