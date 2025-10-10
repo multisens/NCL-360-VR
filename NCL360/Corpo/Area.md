@@ -2,10 +2,10 @@
 layout: default
 title: Area
 nav_order: 1
-parent: Media
+parent: Mediaㅤ
 ---
 
- O elemento Area é usado para definir um pedac¸o de uma mídia de áudio ou vídeo. Seu uso principal é permitir que sejam sincronizados diferentes objetos com trechos de um vídeo ou áudio.
+ O elemento Area é usado para definir um trecho de uma mídia de áudio ou vídeo. Seu uso principal é permitir que sejam sincronizados diferentes objetos com trechos de um vídeo ou áudio.
 
 Exemplo: 
 

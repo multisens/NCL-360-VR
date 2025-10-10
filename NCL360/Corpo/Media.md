@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Media
+title: Mediaㅤ
 nav_order: 1
 parent: Corpo
 has_children: true
