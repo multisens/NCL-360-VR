@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Documentos
+title: Guaraná
 nav_order: 2
 has_children: true
 ---
-Index com os documentos do Guaraná.
+Documentação do sistema Guaraná.
