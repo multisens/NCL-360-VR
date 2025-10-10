@@ -22,4 +22,4 @@ O elemento Port possui apenas um parâmetro ⠀
 
 
 ## Component
-Identifica uma ou mais mídias que serão iniciadas quando começar a cena. O valor "main" representa o vídeo principal, mas pode ser passado o id de outros objetos de mídia.
+Identifica a mídia que será iniciada quando começar a cena.
