@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Descriptor
-nav_order: 1
+nav_order: 2
 parent: Cabeçalho
 ---
 
@@ -17,34 +17,28 @@ ou
 <descriptor id="dlegenda" region="rleg1"/>
  ```
 
-
 O elemento Descriptor pode receber os seguintes parâmetros ⠀
 
 | Parâmetros   |
 |:-------|
 | [Id](#id)|
-| [Azimuthal](#azimuthal)|
-| [Polar](#polar)|
-| [Radius](#radius)|
-| [Width e Height](#width-e-height)| 
-| [zIndex](#zindex)|
-| [Pin](#pin)|
-| [PinType](#pintype)|
+| [Region](#region)|
+| [Dur](#dur)|
+| [Volume](#volume)| 
+| [SoundType](#soundtype)|
+| [Projection](#projection)|
 
 
 ## Id
-Identificador da região.
-## Azimuthal 
-Ângulo horizontal em relação a posição inicial do usuário para posicionamento de um objeto. O valor é definido em graus no formato xd, onde x é o valor do ângulo.
-## Polar 
-Ângulo vertical em relação a posição inicial do usuário para posicionamento de um objeto. O valor é definido em graus no formato xd, onde x é o valor do ângulo.
-## Radius 
-Distância em função da posição inicial do usuário em que um determinado objeto de mídia será apresentado. O valor é definido em metros.
-## Width e Height
-Largura e altura da região onde o obejto será apresentado, respectivamente. Ambos os valores são definidos em metros.
-## zIndex 
-Índice de sobreposição entre regiões. A região de maior índice é apresentada na frente de outras de índice menor.
-## Pin 
-Especifica em relação a que ponto de referência o objeto é fixado. Os valores possíveis são: environment para posicionar em relação ao ambiente como um todo, head para se mover junto com a câmera, leftHand ou rightHand para se mover junto com a mão esquerda ou direita, respectivamente. O valor padrão para esse atributo é environment.
-## PinType 
-Especifica se o objeto deverá ficar fixo em relação ao ângulo de rotação (rotation) ou posição (position).
+Identificador do descritor.
+## Region 
+Região que define a posição onde um objeto será posicionado. A indicação da região é feita indicando o identificador da região. Além do identificador das regiões definidas no próprio documento, é possível utilizar dois identificadores predefinidos. O identificador default.sky define que o objeto deverá ser exibida no ambiente como um todo (vídeo 360º). O identificador default.floor define que o objeto deverá ser apresentado no chão.
+## Dur 
+Duração explícita do objeto que se sobrepõe a sua duração natural.
+## Volume
+Volume do som. O valor desse atributo é um número entre 0 (sem som) e 1 (volume máximo).
+## SoundType 
+Especifica se o som deverá ou não ser espacializado, utilizando os valores 3D ou 2D, respectiva
+mente. O valor padrão para esse atributo é 2D.
+## Projection 
+Especifica o tipo de projeção da mídia 360. Os possíveis valores para esse atributo são "equirectangular", "cylindrical-equal-area", "icosahedron", "cubemap", "adjusted-cubemap", "equiangular-cubemap" e "rotated-sphere"
